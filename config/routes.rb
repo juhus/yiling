@@ -1,6 +1,7 @@
 Yiling::Application.routes.draw do
+  match ':name' => 'viewer#show', :as => 'view_page'
   resources :pages
-  root :to => "pages#index"
+  root :to => 'viewer#show', :name => 'fengshui'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
